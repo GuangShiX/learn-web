@@ -5,20 +5,37 @@
 
   .wrapper
       padding: 6px  // 内边距
-      margin: 10px
-      background: #DCDCDC  // 背景色
+      background: #1d1d1f
+      color: #f4f4f6
+      text-align: center
+
 
   .topButtonBox
-    padding: 6px  // 内边距
-    background: #DCDCDC  // 背景色
+    height: 74px
+    display: flex //
+    align-items: stretch
+    justify-content: center
+    background: #000000
+    user-select: none
+    // 背景色
+
+    .icon
+      transform: scale(0.8) translateY(2px)
+      margin: 0 20px
+      fill: white
 
     .button
-      display: inline-block  // 横排列
-      background: #ccbdbd
-      //背景颜色
-      padding: 6px 18px
-      margin: 6px //外边距
-      border-radius: 8px // 圆角
+
+      line-height: 74px
+      text-align: center
+      background: #000000
+      color: #dddddd
+      padding: 0 24px
+      transition: all 0.2s ease-in-out
+
+      &:hover
+        background: #222222
+        color: white
 
 
 
