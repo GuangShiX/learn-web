@@ -9,7 +9,6 @@ export default function Test() {
         <svg className={styles.icon} viewBox='0 0 14 44' xmlns='http://www.w3.org/2000/svg'>
           <path d='m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z'></path>
         </svg>
-        {/*<i className='fab fa-apple'></i>*/}
         <div className={styles.button}>商店</div>
         <div className={styles.button}>Mac</div>
         <div className={styles.button}>iPad</div>
@@ -40,14 +39,46 @@ export default function Test() {
           <div className={styles.text}>RMB 375/月起或 RMB 8999 起**</div>
         </div>
       </div>
-      <div className={styles.videobox}>
+      <div className={styles.section1}>
         <div className={styles.sectionHeader}>
           <div className={styles.headline}>先看重点</div>
-          <div className={styles.headLink}>观看影片</div>
+          <div className={styles.headLinkBox}>
+            <div className={styles.headerLinkText}>观看影片</div>
+            <div className={styles.headLinkIco}>X</div>
+          </div>
         </div>
-        <Image src='/test2.gif' width={600} height={800} alt={'error'} />
-        <Image src='/test2.gif' width={600} height={800} alt={'error'} />
-        <Image src='/test2.gif' width={600} height={800} alt={'error'} />
+        <div className={styles.videoBox}>
+          <div className={styles.video}>
+            <Image
+              src='/images/iPhone17ProMax/highlights_design_endframe__flng.jpg'
+              width={1868*0.3}
+              height={1256*0.3}
+              alt={'error'} />
+            <div
+              className={styles.text1}>热锻铝金属一体成型机身，造就巅峰实力。</div>
+          </div>
+          <div className={styles.video}>
+            <Image
+              src='/images/iPhone17ProMax/highlights_chip_endframe__eiseso.jpg'
+               width={1868*0.3}
+               height={1256*0.3}
+               alt={'error'} />
+            <div className={styles.text2}>A19 Pro，第三代 3 纳米芯片，配合蒸发冷却技术,<br/>强势性能火力全开。电池续航也大大突破。</div>
+          </div>
+          <div className={styles.video}>
+            <Image className={styles.video}
+                   src='/images/iPhone17ProMax/highlights_zoom_endframe__qilnpa.jpg'
+                   width={1868*0.3}
+                   height={1256*0.3}
+                   alt={'error'} />
+            <div className={styles.text3}>顶尖的 Pro 级拍摄系统。后摄全上 4800 万像素融合式摄像头，变焦幅度更是 iPhone 历来最大。</div>
+            <div className={styles.buttonBox}>
+              <div className={styles.button}>购买</div>
+              <div className={styles.text}>RMB 375/月起或 RMB 8999 起**</div>
+            </div>
+          </div>
+        </div>
+
         <div className={styles.text2}>
           This page is used to test the GXLing's Next.js project. It is not a real page, but a test
           page.

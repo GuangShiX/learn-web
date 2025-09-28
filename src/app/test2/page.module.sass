@@ -1,16 +1,18 @@
 .page
+  --cover-image-height: 50rem
+
   height: 100%          // 页面高度占满整个视口
   width: 100%           // 页面宽度占满整个视口
   position: relative    // 相对定位，方便子元素使用绝对定位
 
   .wrapper
-    padding: 6px        // 内边距 6px
+    padding: 16px        // 内边距 6px
     background: #1d1d1f // 背景色（深灰）
     color: #f4f4f6      // 字体颜色（浅灰）
     text-align: center  // 文本居中对齐
 
   .header
-    height: 74px              // 头部高度
+    height: 74*0.8px              // 头部高度
     display: flex             // 使用 Flex 布局
     align-items: stretch      // 子元素在交叉轴上拉伸填满
     justify-content: center   // 子元素在主轴上居中
@@ -19,7 +21,7 @@
 
     .icon
       transform: scale(0.8) translateY(2px) // 缩小图标并向下偏移 2px
-      margin: 0 20px                        // 左右间距 20px
+      padding: 0 8px
       fill: white                           // 填充色为白色（通常用于 SVG）
 
     .button
@@ -36,19 +38,27 @@
 
   .topVideoWrapper
     position: relative               // 相对定位（子元素可绝对定位）
+    background: black
+    width: 100%
+    height: calc(var(--cover-image-height) + 4rem)
 
     .img2
-      height: 100%          // 页面高度占满整个视口
-      width: 100%     // 页面宽度占满整个视口
+      position: absolute
+      bottom: 0
+      width:  calc(var(--cover-image-height)/1682*2880)    // 页面宽度占满整个视口
+      height: var(--cover-image-height)
+      left: 50%
+      transform: translateX(-50%)
 
     .themeDark
       user-select: none              // 禁止文字选中
       position: absolute             // 绝对定位（覆盖在视频区域上）
       display: flex                  // 使用 Flex 布局
       flex-direction: column         // 垂直排列子元素
-      width: 100%               // 宽度固定为 40rem
+      width: 100%                    // 页面宽度占满整个视口
       bottom: 1rem                   // 距离底部 2rem
       align-items: center            // 子元素居中对齐
+      color: white
 
       .button
         align-content: center        // 内容居中
@@ -62,12 +72,59 @@
         padding: 8px 15px            // 内边距
         font-weight: bold            // 加粗字体
 
-  .videoBox
-    display: flex                    // 使用 Flex 布局
-    justify-content: space-between   // 子元素左右分散对齐
+  .section1
+    flex-direction: column
+    background: #1d1d1f
+    padding: 100px 0
+    color: white
 
     .sectionHeader
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+      padding: 0 0 80px
+      column-gap: 80px
+
       .headline
-        display: inline-block        // 让标题在一行内显示
-      .headLink
-        display: inline-block        // 让链接在一行内显示
+        font-size: 36px
+
+      .headLinkBox
+        display: flex
+        flex-direction: row
+        bottom: -2px
+        color: #2997ff
+        .headerLinkIco
+
+        .headerLinkText
+
+    .videoBox
+      display: flex
+      flex-direction: row
+      justify-content: center
+
+      .video
+        position: relative
+        height: 100%    // 页面高度占满整个视口
+        width: 100%     // 页面宽度占满整个视口
+        padding: 0 30px
+        margin: 0 30px
+        
+
+
+        .text1
+          font-size: 13px
+          position: absolute
+          bottom: 1rem
+          left: 50%
+          transform: translateX(-50%)
+          font-weight: bold
+
+        .text2
+          font-size: 14px
+          position: absolute
+          text-align: center
+          bottom: 1rem
+          left: 50%
+          transform: translateX(-50%)
+          font-weight: bold
