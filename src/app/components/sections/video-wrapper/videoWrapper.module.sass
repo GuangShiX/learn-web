@@ -1,0 +1,37 @@
+.videoWrapper
+  --cover-image-height: 50rem
+  position: relative               // 相对定位（子元素可绝对定位）
+  background: black
+  width: 100%
+  height: calc(var(--cover-image-height) + 4rem)
+
+  .image
+    position: absolute
+    bottom: 0
+    width:  calc(var(--cover-image-height)/1682*2880)    // 页面宽度占满整个视口
+    height: var(--cover-image-height)
+    left: 50%
+    transform: translateX(-50%)
+
+  .themeDark
+    user-select: none              // 禁止文字选中
+    position: absolute             // 绝对定位（覆盖在视频区域上）
+    display: flex                  // 使用 Flex 布局
+    flex-direction: column         // 垂直排列子元素
+    width: 100%                    // 页面宽度占满整个视口
+    bottom: 4rem                   // 距离底部 2rem
+    align-items: center            // 子元素居中对齐
+    color: white
+    font-weight: bold
+    font-size: 12px
+    padding: 8px 15px
+
+    .button
+      align-content: center        // 内容居中
+      padding: 8px 15px            // 内边距
+      background: #0066cc          // 蓝色背景
+      color: white                 // 白色文字
+      border-radius: 999999px      // 超大圆角（胶囊按钮）
+
+    .text
+      align-content: center        // 内容居中

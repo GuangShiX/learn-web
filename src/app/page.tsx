@@ -1,13 +1,12 @@
 import Image from "next/image";
-import styles from "./page.module.sass";
+import Header from './components/ui/header';
+import Wrapper from './components/sections/wrapper'
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-      </main>
-      <footer className={styles.footer}>
-      </footer>
-    </div>
+    <main>
+      <Header />
+      <Wrapper />
+    </main>
   );
 }

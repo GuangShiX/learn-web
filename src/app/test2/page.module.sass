@@ -1,76 +1,9 @@
 .page
-  --cover-image-height: 50rem
+
 
   height: 100%          // 页面高度占满整个视口
   width: 100%           // 页面宽度占满整个视口
   position: relative    // 相对定位，方便子元素使用绝对定位
-
-  .wrapper
-    padding: 16px        // 内边距 6px
-    background: #1d1d1f // 背景色（深灰）
-    color: #f4f4f6      // 字体颜色（浅灰）
-    text-align: center  // 文本居中对齐
-
-  .header
-    height: 74*0.8px              // 头部高度
-    display: flex             // 使用 Flex 布局
-    align-items: stretch      // 子元素在交叉轴上拉伸填满
-    justify-content: center   // 子元素在主轴上居中
-    background: #000000       // 背景色黑色
-    user-select: none         // 禁止文字被选中
-
-    .icon
-      transform: scale(0.8) translateY(2px) // 缩小图标并向下偏移 2px
-      padding: 0 8px
-      fill: white                           // 填充色为白色（通常用于 SVG）
-
-    .button
-      line-height: 74px              // 按钮文字垂直居中
-      text-align: center             // 按钮文字水平居中
-      background: #000000            // 按钮背景黑色
-      color: #dddddd                 // 按钮文字颜色浅灰
-      padding: 0 24px                // 左右内边距 24px
-      transition: all 0.2s ease-in-out // 添加过渡效果（鼠标悬停时平滑变化）
-
-      &:hover
-        background: #222222          // 悬停时背景变深灰
-        color: white                 // 悬停时文字变白
-
-  .topVideoWrapper
-    position: relative               // 相对定位（子元素可绝对定位）
-    background: black
-    width: 100%
-    height: calc(var(--cover-image-height) + 4rem)
-
-    .img2
-      position: absolute
-      bottom: 0
-      width:  calc(var(--cover-image-height)/1682*2880)    // 页面宽度占满整个视口
-      height: var(--cover-image-height)
-      left: 50%
-      transform: translateX(-50%)
-
-    .themeDark
-      user-select: none              // 禁止文字选中
-      position: absolute             // 绝对定位（覆盖在视频区域上）
-      display: flex                  // 使用 Flex 布局
-      flex-direction: column         // 垂直排列子元素
-      width: 100%                    // 页面宽度占满整个视口
-      bottom: 1rem                   // 距离底部 2rem
-      align-items: center            // 子元素居中对齐
-      color: white
-
-      .button
-        align-content: center        // 内容居中
-        padding: 8px 15px            // 内边距
-        background: #0066cc          // 蓝色背景
-        color: white                 // 白色文字
-        border-radius: 999999px      // 超大圆角（胶囊按钮）
-
-      .text
-        align-content: center        // 内容居中
-        padding: 8px 15px            // 内边距
-        font-weight: bold            // 加粗字体
 
   .section1
     flex-direction: column
@@ -109,16 +42,9 @@
         width: 100%     // 页面宽度占满整个视口
         padding: 0 30px
         margin: 0 30px
-        
 
 
-        .text1
-          font-size: 13px
-          position: absolute
-          bottom: 1rem
-          left: 50%
-          transform: translateX(-50%)
-          font-weight: bold
+
 
         .text2
           font-size: 14px
