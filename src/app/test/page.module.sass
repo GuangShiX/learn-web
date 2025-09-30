@@ -1,47 +1,94 @@
+$primary-black: #000
+$price-red: #ff0000
+$border-gray: #ccc
+$bg-gray: #eee
+$white: #fff
+
 .page
-  height: 100% // 高度100%
-  width: 100% // 宽度100%
-  position: relative // 相对布局定位
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif
 
-  .globalnav-list
-    display: flex
-    align-items: center
-    position: relative
-    .menuButton
-      position: relative
-      padding: 12px 24px
-      color: white
-      overflow: hidden
-      font-size: 14px
-    .buttonBox
-      padding: 6px  // 内边距
-      background: #DCDCDC  // 背景色
+.header
+  padding: 1.5rem
+  background-color: $white
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+  position: sticky
+  top: 0
+  z-index: 100
 
-  .buttonBox
-    padding: 6px  // 内边距
-    background: #DCDCDC  // 背景色
+.searchBar
+  width: 100%
+  max-width: 600px
+  padding: 0.8rem
+  border: 1px solid $border-gray
+  border-radius: 4px
+  font-size: 1rem
 
-    .button
-      display: inline-block  // 横排列
-      background: #4CAF50 // 绿色背景
-      padding: 6px 18px
-      margin: 6px //外边距
-      border-radius: 8px // 圆角
+.content
+  display: flex
+  flex: 1
+  padding: 1.5rem
 
-  .box
+.sidebar
+  width: 25%
+  min-width: 200px
+  padding-right: 2rem
+  border-right: 1px solid $border-gray
 
-    background: #DCDCDC
-    padding: 20px
-    position: absolute // 绝对布局定位
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%) //平移 -50% -50%
-    min-width: 100px // 最小宽度
+.categoryItem
+  padding: 1rem
+  margin-bottom: 0.5rem
+  cursor: pointer
+  transition: all 0.3s ease
+  color: $primary-black
 
-    .title
-      font-size: 48px // 字体大小
-      font-weight: bold // 粗体
-      margin-bottom: 10px // 下边距
+  &:hover
+    background-color: rgba($border-gray, 0.2)
 
-    .text
-      margin-bottom: 6px
+.productGrid
+  flex: 1
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
+  gap: 1.5rem
+
+.productCard
+  border: 1px solid $border-gray
+  border-radius: 8px
+  padding: 1.5rem
+  text-align: center
+  transition: transform 0.3s ease
+
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1)
+
+.productImage
+  height: 180px
+  background-color: $bg-gray
+  margin-bottom: 1rem
+
+.productName
+  color: $primary-black
+  font-size: 1.1rem
+  margin-bottom: 0.5rem
+
+.productPrice
+  color: $price-red
+  font-weight: 600
+  font-size: 1.2rem
+
+@media (max-width: 768px)
+  .content
+    flex-direction: column
+
+  .sidebar
+    width: 100%
+    padding-right: 0
+    margin-bottom: 2rem
+    border-right: none
+    border-bottom: 1px solid $border-gray
+
+  .productGrid
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr))
