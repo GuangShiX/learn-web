@@ -1,0 +1,136 @@
+// 颜色定义
+$primary-red: #ff0000
+$primary-black: #000
+$border-gray: #ccc
+$white: #fff
+$shadow: rgba(0,0,0,0.1)
+
+// 购物车页面布局
+.cartPage
+  max-width: 1200px
+  margin: 0 auto
+  padding: 20px
+
+  h1
+    text-align: center
+    margin-bottom: 30px
+
+// 购物车容器
+.cartContainer
+  border: 1px solid $border-gray
+  border-radius: 12px
+  overflow: hidden
+  background-color: $white
+  box-shadow: 0 5px 15px $shadow
+
+// 商品列表
+.cartItems
+  padding: 20px
+
+.cartItem
+  display: flex
+  align-items: center
+  padding: 20px 0
+  border-bottom: 1px solid $border-gray
+
+// 商品图片
+.itemImage
+  width: 120px
+  height: 120px
+  object-fit: cover
+  margin-right: 20px
+  border-radius: 10px
+
+// 商品详情
+.itemDetails
+  flex: 1
+
+.itemName
+  font-size: 1.2rem
+  font-weight: 600
+  margin-bottom: 5px
+
+.itemPrice
+  color: $primary-red
+  font-size: 1.1rem
+
+// 数量控制
+.quantityControl
+  display: flex
+  align-items: center
+  margin: 0 20px
+  gap: 10px
+
+  button
+    width: 36px
+    height: 36px
+    background-color: #f0f0f0
+    border: 1px solid $border-gray
+    border-radius: 50%
+    cursor: pointer
+    font-weight: bold
+
+  input
+    width: 50px
+    height: 36px
+    text-align: center
+    border: 1px solid $border-gray
+    border-radius: 6px
+
+// 商品总价
+.itemTotal
+  width: 150px
+  text-align: right
+  font-weight: 600
+  font-size: 1.2rem
+
+// 删除按钮
+.removeButton
+  background: none
+  border: 1px solid $border-gray
+  padding: 8px 15px
+  border-radius: 20px
+  cursor: pointer
+  transition: all 0.3s ease
+
+  &:hover
+    background-color: #f0f0f0
+
+// 结算区域
+.cartFooter
+  padding: 25px
+  background-color: #f8f8f8
+
+.totalRow
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 20px
+  font-size: 1.3rem
+
+.totalPrice
+  color: $primary-red
+  font-weight: 700
+
+.checkoutButton
+  width: 100%
+  padding: 15px
+  background-color: $primary-red
+  color: $white
+  border: none
+  border-radius: 8px
+  cursor: pointer
+  font-size: 1.1rem
+  font-weight: 600
+  transition: all 0.3s ease
+
+  &:hover
+    background-color: darken($primary-red, 10%)
+    transform: translateY(-2px)
+
+// 空购物车状态
+.emptyCart
+  text-align: center
+  padding: 50px 0
+  font-size: 1.2rem
+  color: #888

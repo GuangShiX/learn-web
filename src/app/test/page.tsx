@@ -1,13 +1,23 @@
 import React from 'react';
 import styles from './page.module.sass';
 
+interface Product {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+}
+
 const Page = () => {
   const categories = ['全部商品', '奶粉', '婴儿用品', '洗护', '玩具'];
-  const products = [
-    { id: 1, name: '婴儿奶粉 1段', price: '¥299.00' },
-    { id: 2, name: '婴儿湿巾 80抽', price: '¥39.90' },
-    { id: 3, name: '婴儿洗发水', price: '¥59.00' },
-    { id: 4, name: '益智玩具', price: '¥129.00' },
+
+  const products: Product[] = [
+    { id: 1, name: '婴儿奶粉 1段', price: '¥299.00', image: '/1.jpg' },
+    { id: 2, name: '婴儿湿巾 80抽', price: '¥39.90', image: '/2.jpg' },
+    { id: 3, name: '婴儿爽身粉', price: '¥49.90', image: '/3.jpg' },
+    { id: 4, name: '婴儿奶瓶', price: '¥89.00', image: '/4.jpg' },
+    { id: 5, name: '儿童牙膏', price: '¥29.50', image: '/5.jpg' },
+    { id: 6, name: '益智玩具', price: '¥129.00', image: '/6.jpg' },
   ];
 
   return (
@@ -32,7 +42,11 @@ const Page = () => {
         <main className={styles.productGrid}>
           {products.map((product) => (
             <div key={product.id} className={styles.productCard}>
-              <div className={styles.productImage} />
+              <img
+                src={product.image}
+                alt={product.name}
+                className={styles.productImage}
+              />
               <div className={styles.productName}>{product.name}</div>
               <div className={styles.productPrice}>{product.price}</div>
             </div>
