@@ -1,12 +1,13 @@
 // === 头部导航栏样式 ===
 .header
-  --cover-main-height: 40px           // 定义 CSS 变量：头部高度
+  --cover-main-height: 40px
   height: var(--cover-main-height)    // 头部高度
   display: flex                       // 使用 Flex 布局
   align-items: center                 // 垂直居中对齐
   background: #000000                 // 背景色黑色
   user-select: none                   // 禁止文字被选中
-  justify-content: center             // 水平居中对齐
+  justify-content: space-between      // 两端对齐（让内容分散到左右两端）
+  padding: 0 calc(var(--cover-main-height) * 5)                     // 左右内边距 20px，控制离边缘的距离
 
   // === Logo 图标 ===
   .icon
