@@ -1,6 +1,6 @@
 // === 视频包装容器样式 ===
 .videoWrapper
-  --cover-image-height: 50rem                          // 定义 CSS 变量：封面图片高度
+  --cover-image-height: 50rem
   position: relative                                   // 相对定位（子元素可绝对定位）
   background: black                                    // 黑色背景
   width: 100%                                          // 宽度 100%
@@ -9,7 +9,7 @@
   // === 封面图片 ===
   .image
     position: absolute                                      // 绝对定位
-    bottom: 0                                               // 靠底部对齐
+    bottom: 0                                              // 靠底部对齐
     width:  calc(var(--cover-image-height)/1682*2880)       // 宽度根据比例计算（保持图片比例）
     height: var(--cover-image-height)                       // 高度使用变量
     left: 50%                                               // 距离左侧 50%
@@ -22,12 +22,12 @@
     display: flex                        // 使用 Flex 布局
     flex-direction: column               // 垂直排列子元素
     width: 100%                          // 宽度 100%
-    bottom: 4rem                         // 距离底部 4rem
+    bottom: 5rem                         // 距离底部 4rem
     align-items: center                  // 子元素居中对齐
     color: white                         // 白色文字
     font-weight: bold                    // 字体加粗
-    font-size: 12px                      // 字体大小 12px
-    padding: 8px 15px                    // 内边距
+    font-size: 16px                      // 字体大小 12px
+    padding: 8px 0                    // 内边距
 
     // === 按钮样式 ===
     .button
@@ -39,4 +39,5 @@
 
     // === 文字样式 ===
     .text
+      margin: 10px 0
       align-content: center              // 内容居中
