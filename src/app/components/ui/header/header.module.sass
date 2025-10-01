@@ -1,28 +1,31 @@
+// === 头部导航栏样式 ===
 .header
-  --cover-main-height: 40px
-  height: var(--cover-main-height)              // 头部高度
-  display: flex             // 使用 Flex 布局
-  align-items: center       //
-  background: #000000       // 背景色黑色
-  user-select: none         // 禁止文字被选中
-  justify-content: center
+  --cover-main-height: 40px           // 定义 CSS 变量：头部高度
+  height: var(--cover-main-height)    // 头部高度
+  display: flex                       // 使用 Flex 布局
+  align-items: center                 // 垂直居中对齐
+  background: #000000                 // 背景色黑色
+  user-select: none                   // 禁止文字被选中
+  justify-content: center             // 水平居中对齐
 
+  // === Logo 图标 ===
   .icon
-    width: var(--cover-main-height)
-    height: var(--cover-main-height)
-    transform: scale(1) translateY(2px)
+    width: var(--cover-main-height)       // 图标宽度等于头部高度
+    height: var(--cover-main-height)      // 图标高度等于头部高度
+    transform: scale(1) translateY(2px)   // 缩放为 1 倍，向下偏移 2px
     fill: white                           // 填充色为白色（通常用于 SVG）
 
 
+  // === 导航按钮 ===
   .button
-    line-height: calc(var(--cover-main-height)  * 0.5)        // 按钮文字垂直居中
-    font-size: 12px
-    margin: 0 10px
-    text-align: center             // 按钮文字水平居中
-    background: #000000            // 按钮背景黑色
-    color: #dddddd                 // 按钮文字颜色浅灰
-    transition: all 0.2s ease-in-out // 添加过渡效果（鼠标悬停时平滑变化）
+    line-height: calc(var(--cover-main-height)  * 0.5)   // 按钮文字垂直居中（高度的一半）
+    font-size: 12px                    // 字体大小 12px
+    margin: 0 10px                     // 左右外边距 10px
+    text-align: center                 // 按钮文字水平居中
+    background: #000000                // 按钮背景黑色
+    color: #dddddd                     // 按钮文字颜色浅灰
+    transition: all 0.2s ease-in-out   // 添加过渡效果（鼠标悬停时平滑变化）
 
-    &:hover
-      background: #222222          // 悬停时背景变深灰
-      color: white                 // 悬停时文字变白
+    &:hover                            // 鼠标悬停时的样式
+      background: #222222              // 悬停时背景变深灰
+      color: white                     // 悬停时文字变白
