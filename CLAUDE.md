@@ -96,6 +96,19 @@ export default function Header() {
 }
 ```
 
+**重要提示：Sass 注释规范**
+- ⚠️ **切勿在 CSS 变量（--variable）同一行添加注释**，这会导致编译错误
+- 正确做法：在变量上方单独一行写注释
+
+```sass
+// 正确 ✓
+// 头部高度变量
+--cover-main-height: 40px
+
+// 错误 ✗
+--cover-main-height: 40px  // 头部高度（这会导致编译错误！）
+```
+
 ## 学习要点
 
 作为 React 初学者项目，以下是重点学习方向：

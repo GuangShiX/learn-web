@@ -1,8 +1,55 @@
 // === 页脚样式 ===
+
 .footer
-  width: 100%
-  background: #f5f5f7
-  padding: 20px 0
+  width: 100%                      // 页脚宽度占满整个视口
+  background: #f5f5f7              // 浅灰色背景（苹果官网风格）
+  padding: 20px 0                  // 上下内边距 20px
+
+  // 面包屑导航容器
   .breadCrumbs
-    display: flex
-    flex-direction: column
+    display: flex                  // 使用 Flex 布局
+    flex-direction: column         // 垂直排列子元素
+    width: 70%                     // 宽度为父容器的 50%
+    margin: 0 auto                 // 水平居中
+
+    // 面包屑路径容器
+    .breadCrumbsPath
+
+      // 面包屑列表（使用 ol 标签）
+      .breadCrumbsList
+        display: flex              // 使用 Flex 布局
+        flex-direction: row        // 水平排列子元素
+        align-items: center        // 垂直居中对齐
+        list-style: none           // 移除默认的列表样式
+        padding: 0                 // 移除默认内边距
+        margin: 0                  // 移除默认外边距
+        // 苹果 Logo 图标
+        .icon
+          height: 44px                 // 图标高度
+          width: 14px                  // 图标宽度（保持比例）
+          fill: #1d1d1f                // 填充色为深灰色
+          margin-right: 0.5em          // 右侧间距
+          align-self: flex-end         // 对齐到底部
+          margin-bottom: -8px          // 向下微调位置，更贴近底端
+
+
+        // 单个面包屑项
+        .breadCrumbsItem
+          display: inline-block
+          font-size: 1rem
+          font-weight: 100
+          color: #000000
+          letter-spacing: 2px
+          cursor: pointer
+
+          // 使用 ::before 伪元素添加分隔符
+          &::before
+            content: "›"           // 右箭头符号（Unicode \203A）
+            margin: 0 0.3em        // 左右间距 0.3 倍字体大小
+            color: #868686         // 灰色箭头
+            font-size: 1.2em       // 箭头字体比文字大 20%
+
+    // 目录区域（预留）
+    .directory
+      display: flex                // 使用 Flex 布局
+      height: 600px                // 高度 600px
