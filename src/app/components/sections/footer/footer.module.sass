@@ -35,12 +35,12 @@
 
         // 单个面包屑项
         .breadCrumbsItem
-          display: inline-block
-          font-size: 1rem
-          font-weight: 100
-          color: #000000
-          letter-spacing: 2px
-          cursor: pointer
+          display: inline-block          // 行内块级元素，可设置宽高且不换行
+          font-size: 1rem                // 字体大小 1rem（16px）
+          font-weight: 100               // 字体粗细最细（Thin）
+          color: #000000                 // 文字颜色黑色
+          letter-spacing: 2px            // 字符间距 2px，增加视觉呼吸感
+          cursor: pointer                // 鼠标悬停时显示手型指针
 
           // 使用 ::before 伪元素添加分隔符
           &::before
