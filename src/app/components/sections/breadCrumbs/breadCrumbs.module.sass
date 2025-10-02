@@ -1,8 +1,11 @@
 // === 面包屑导航样式 ===
 
+.html
+  background: #f5f5f7
 .breadCrumbs
   display: flex
   // 使用 Flex 布局
+  background: #f5f5f7
   flex-direction: column
   // 垂直排列子元素
   width: 90%
@@ -38,8 +41,6 @@
         // 填充色为深灰色
         margin-right: 0.5em
         // 右侧间距 0.5em
-        align-self: flex-end
-        // 对齐到底部
         margin-bottom: -8px
         // 向下微调位置 8px，更贴近底端
 
@@ -51,8 +52,6 @@
         // 字体大小 1rem（16px）
         color: #000000
         // 文字颜色黑色
-        letter-spacing: 2px
-        // 字符间距 2px，增加视觉呼吸感
         cursor: pointer
         // 鼠标悬停时显示手型指针
 
@@ -60,7 +59,7 @@
         &::before
           content: "›"
           // 右箭头符号（Unicode \203A）
-          margin: 0 0.3em
+          margin: 0 1rem
           // 左右间距 0.3 倍字体大小
           color: #868686
           // 灰色箭头
@@ -109,5 +108,5 @@
       // 使用 Flex 布局
       flex-direction: column
       // 垂直排列子元素
-      margin: 30px 0 10px 0
+      margin: 10px 0 5px 0
       // 上边距 30px，下边距 10px

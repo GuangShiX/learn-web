@@ -75,6 +75,8 @@ export default function BreadCrumbs() {
             <div className={styles.button}>Apple 与教育</div>
             <div className={styles.button}>高校师生选购</div>
           </div>
+        </div>
+        <div className={styles.column}>
           <div className={styles.columnBox}>
             <div className={styles.title}>Apple 价值观</div>
             <div className={styles.button}>辅助功能</div>
@@ -83,8 +85,6 @@ export default function BreadCrumbs() {
             <div className={styles.button}>隐私</div>
             <div className={styles.button}>供应链创新</div>
           </div>
-        </div>
-        <div className={styles.column}>
           <div className={styles.columnBox}>
             <div className={styles.title}>关于 Apple</div>
             <div className={styles.button}>Newsroom</div>

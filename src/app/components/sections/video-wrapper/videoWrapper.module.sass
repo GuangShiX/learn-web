@@ -4,16 +4,22 @@
   position: relative                                   // 相对定位（子元素可绝对定位）
   background: black                                    // 黑色背景
   width: 100%                                          // 宽度 100%
-  height: calc(var(--cover-image-height) + 4rem)       // 高度 = 封面高度 + 4rem
+  height: calc(var(--cover-image-height) )       // 高度 = 封面高度 + 4rem
 
   // === 封面图片 ===
   .image
-    position: absolute                                      // 绝对定位
-    bottom: 0                                              // 靠底部对齐
-    width:  calc(var(--cover-image-height)/1682*2880)       // 宽度根据比例计算（保持图片比例）
-    height: var(--cover-image-height)                       // 高度使用变量
-    left: 50%                                               // 距离左侧 50%
-    transform: translateX(-50%)                             // 向左平移 50%（实现水平居中）
+    position: absolute
+    // 绝对定位
+    bottom: 0
+    // 靠底部对齐
+    width: 100%
+    // 宽度占满容器
+    height: auto
+    // 高度自动计算（保持图片比例）
+    left: 50%
+    // 距离左侧 50%
+    transform: translateX(-50%)
+    // 向左平移 50%（实现水平居中）
 
   // === 深色主题文字区域 ===
   .themeDark
