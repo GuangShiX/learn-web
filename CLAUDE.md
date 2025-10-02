@@ -22,7 +22,7 @@
 
 ### 目录结构
 
-```
+```text
 src/app/
 ├── layout.tsx                 # 应用根布局
 ├── page.tsx                   # 首页

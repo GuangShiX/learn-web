@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import React from 'react';
+
+
 import styles from './page.module.sass';
 
 interface Product {
@@ -42,10 +45,12 @@ const Page = () => {
         <main className={styles.productGrid}>
           {products.map((product) => (
             <div key={product.id} className={styles.productCard}>
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 className={styles.productImage}
+                width={300}
+                height={300}
               />
               <div className={styles.productName}>{product.name}</div>
               <div className={styles.productPrice}>{product.price}</div>

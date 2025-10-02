@@ -1,6 +1,9 @@
 "use client"; // 标记为客户端组件
 
+import Image from 'next/image';
 import React, { useState } from 'react';
+
+
 import styles from './page.module.sass'; // 正确导入Sass模块
 
 interface CartItem {
@@ -11,15 +14,15 @@ interface CartItem {
   image: string;
 }
 
+// 示例商品数据（移到组件外部，避免每次渲染重新创建）
+const sampleItems = [
+  { id: 1, name: '婴儿奶粉 1段', price: 299, image: '/1.jpg' },
+  { id: 2, name: '婴儿湿巾 80抽', price: 39.9, image: '/2.jpg' },
+  { id: 3, name: '婴儿爽身粉', price: 49.9, image: '/3.jpg' },
+];
+
 const CartPage = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-
-  // 示例商品数据
-  const sampleItems = [
-    { id: 1, name: '婴儿奶粉 1段', price: 299, image: '/1.jpg' },
-    { id: 2, name: '婴儿湿巾 80抽', price: 39.9, image: '/2.jpg' },
-    { id: 3, name: '婴儿爽身粉', price: 49.9, image: '/3.jpg' },
-  ];
 
   // 初始化购物车
   React.useEffect(() => {
@@ -58,14 +61,12 @@ const CartPage = () => {
           <div className={styles.cartItems}>
             {cartItems.map(item => (
               <div key={item.id} className={styles.cartItem}>
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
                   className={styles.itemImage}
-                  onError={(e) => {
-                    console.error('图片加载失败:', item.image);
-                    e.currentTarget.src = '/fallback-image.jpg';
-                  }}
+                  width={100}
+                  height={100}
                 />
                 <div className={styles.itemDetails}>
                   <div className={styles.itemName}>{item.name}</div>

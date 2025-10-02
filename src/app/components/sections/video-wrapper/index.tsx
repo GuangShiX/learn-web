@@ -1,5 +1,6 @@
-import styles from "./videoWrapper.module.sass"
 import Image from 'next/image'
+
+import styles from "./videoWrapper.module.sass"
 
 export default function videoWrapper(){
   return (
