@@ -17,7 +17,92 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className={styles.directory}></div>
+        <div className={styles.directory}>
+          <div className={styles.column}>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>选购及了解</div>
+              <div className={styles.button}>商店</div>
+              <div className={styles.button}>Mac</div>
+              <div className={styles.button}>iPad</div>
+              <div className={styles.button}>iPhone</div>
+              <div className={styles.button}>Watch</div>
+              <div className={styles.button}>Vison</div>
+              <div className={styles.button}>AirPods</div>
+              <div className={styles.button}>家具</div>
+              <div className={styles.button}>AirTag</div>
+              <div className={styles.button}>配件</div>
+              <div className={styles.button}>App Store 充值卡</div>
+            </div>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>Apple钱包</div>
+              <div className={styles.button}>Apple Pay</div>
+              <div className={styles.button}>Apple Pay 公交</div>
+            </div>
+          </div>
+          <div className={styles.column}>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>账户</div>
+              <div className={styles.button}>管理你的Apple账户</div>
+              <div className={styles.button}>Apple Store 账户</div>
+              <div className={styles.button}>iCloud.com</div>
+            </div>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>娱乐</div>
+              <div className={styles.button}>Apple Music</div>
+              <div className={styles.button}>Apple 播客</div>
+              <div className={styles.button}>Apple Store</div>
+            </div>
+
+          </div>
+          <div className={styles.column}>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>Apple Store 商店</div>
+              <div className={styles.button}>查找零售店</div>
+              <div className={styles.button}>Genius Bar 天才吧</div>
+              <div className={styles.button}>Today at Apple</div>
+              <div className={styles.button}>团体预约</div>
+              <div className={styles.button}>Apple 夏令营</div>
+              <div className={styles.button}>Apple Store App</div>
+              <div className={styles.button}>认证的翻新产品</div>
+              <div className={styles.button}>Apple Trade In 换购计划</div>
+              <div className={styles.button}>分期付款</div>
+              <div className={styles.button}>订单状态</div>
+              <div className={styles.button}>选购帮助</div>
+            </div>
+          </div>
+          <div className={styles.column}>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>商务应用</div>
+              <div className={styles.button}>Apple 与商务</div>
+              <div className={styles.button}>商务选购</div>
+            </div>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>教育应用</div>
+              <div className={styles.button}>Apple 与教育</div>
+              <div className={styles.button}>高校师生选购</div>
+            </div>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>Apple 价值观</div>
+              <div className={styles.button}>辅助功能</div>
+              <div className={styles.button}>教育</div>
+              <div className={styles.button}>环境责任</div>
+              <div className={styles.button}>隐私</div>
+              <div className={styles.button}>供应链创新</div>
+            </div>
+          </div>
+          <div className={styles.column}>
+            <div className={styles.columnBox}>
+              <div className={styles.title}>关于 Apple</div>
+              <div className={styles.button}>Newsroom</div>
+              <div className={styles.button}>Apple 管理层</div>
+              <div className={styles.button}>工作机会</div>
+              <div className={styles.button}>创造就业</div>
+              <div className={styles.button}>商业道德与合规性</div>
+              <div className={styles.button}>活动</div>
+              <div className={styles.button}>联系 Apple</div>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   )

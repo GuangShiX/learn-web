@@ -18,19 +18,20 @@
   // === 深色主题文字区域 ===
   .themeDark
     user-select: none                    // 禁止文字选中
+    font-weight: 100               // 字体粗细最细（Thin）
     position: absolute                   // 绝对定位（覆盖在视频区域上）
     display: flex                        // 使用 Flex 布局
     flex-direction: column               // 垂直排列子元素
     width: 100%                          // 宽度 100%
-    bottom: 3rem                         // 距离底部 4rem
+    bottom: 3rem                         // 距离底部 3rem
     align-items: center                  // 子元素居中对齐
     color: white                         // 白色文字
-    font-weight: bold                    // 字体加粗
     font-size: 16px                      // 字体大小 12px
     padding: 8px 0                    // 内边距
 
     // === 按钮样式 ===
     .button
+      bottom: 0                        // 距离底部 3rem
       align-content: center              // 内容居中
       padding: 8px 15px                  // 内边距
       background: #0066cc                // 蓝色背景

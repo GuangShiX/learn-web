@@ -9,7 +9,7 @@
   .breadCrumbs
     display: flex                  // 使用 Flex 布局
     flex-direction: column         // 垂直排列子元素
-    width: 70%                     // 宽度为父容器的 50%
+    width: 90%                     // 宽度为父容器的 50%
     margin: 0 auto                 // 水平居中
 
     // 面包屑路径容器
@@ -52,4 +52,21 @@
     // 目录区域（预留）
     .directory
       display: flex                // 使用 Flex 布局
+      flex-direction: row
+      align-items: start
       height: 600px                // 高度 600px
+
+      .column
+        display: flex
+        flex-direction: column   // 子元素竖向排列
+        width: 25%
+        .title
+          margin: 10px 0 0 0
+          font-size: 1.2rem
+        .button
+          font-size: 0.8rem
+          margin: 10px 0 0 0    // 只保留顶部间距，左侧顶格
+      .columnBox
+        display: flex
+        flex-direction: column
+        margin: 30px 0 10px 0

@@ -3,6 +3,8 @@
   height: 100%          // 页面高度占满整个视口
   width: 100%           // 页面宽度占满整个视口
   position: relative    // 相对定位，方便子元素使用绝对定位
+  font-weight: 100               // 字体粗细最细（Thin）
+
   // === 第一个区块（深色主题视频区） ===
   .section1
     flex-direction: column    // 垂直排列子元素
@@ -27,11 +29,24 @@
       .headLinkBox
         display: flex            // 使用 Flex 布局
         flex-direction: row      // 水平排列子元素
-        bottom: -2px             // 底部位置调整
+        align-items: center      // 垂直居中对齐
+        gap: 8px                 // 文字和图标之间的间距
         color: #2997ff           // 苹果蓝色
-        .headerLinkIco           // 链接图标样式（未定义）
+        text-decoration: none    // 移除下划线
+        cursor: pointer          // 鼠标悬停时显示手型
+        transition: color 0.3s   // 颜色过渡效果
 
-        .headerLinkText          // 链接文字样式（未定义）
+        // 悬停效果
+        &:hover
+          color: #0077ed         // 更深的蓝色
+
+        // 链接文字
+        .headerLinkText
+          font-size: 18px        // 字体大小
+
+        // 链接图标
+        .headLinkIco
+          font-size: 22px        // 图标大小
 
     // 视频容器
     .bigVideoBox
@@ -47,19 +62,28 @@
         // 单个视频项
         .video
           position: relative
-          width: 1260px
-          height: 680px
+          width: 1260 * 0.8px
+          height: auto
           padding: 0 30px 0 0       // 只保留右侧内边距
           margin: 0 30px 0 0        // 只保留右侧外边距
+          border-radius: 30px
+          overflow: hidden          // 确保圆角生效
+
         .text1
           position: absolute
           top: 5%
           left: 50%
           transform: translate(-50%, -50%)
+
         .text2
           position: absolute
           bottom: 5%
           left: 50%
           transform: translate(-50%, -50%)
+
         .text3
           position: absolute
+          top: 10%
+          left: 20%
+          transform: translate(-50%, -50%)
+          color: black

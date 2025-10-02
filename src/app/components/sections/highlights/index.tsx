@@ -8,10 +8,10 @@ export default function Test() {
       <div className={styles.section1}>
         <div className={styles.sectionHeader}>
           <div className={styles.headline}>先刷重点</div>
-          <div className={styles.headLinkBox}>
-            <div className={styles.headerLinkText}>观看影片</div>
-            <div className={styles.headLinkIco}>X</div>
-          </div>
+          <a href="#" className={styles.headLinkBox}>
+            <span className={styles.headerLinkText}>观看影片</span>
+            <i className={`fas fa-play-circle ${styles.headLinkIco}`} aria-hidden="true"></i>
+          </a>
         </div>
         <div className={styles.bigVideoBox}>
           <div className={styles.videoBox}>
@@ -47,8 +47,9 @@ export default function Test() {
               alt={'error'}
             />
             <div className={styles.text3}>
-              顶尖的 Pro 级拍摄系统。后摄全上 4800 万像素融合式摄像头，变焦幅度更是 iPhone
-              历来最大。
+              顶尖的 Pro 级拍摄系统。后摄全上 4800 万像素
+              <br />
+               融合式摄像头，变焦幅度更是 iPhone 历来最大。
             </div>
           </div>
         </div>
