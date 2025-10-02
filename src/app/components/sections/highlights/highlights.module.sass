@@ -1,18 +1,14 @@
 // === 主页面容器 ===
 .page
-
-
   height: 100%          // 页面高度占满整个视口
   width: 100%           // 页面宽度占满整个视口
   position: relative    // 相对定位，方便子元素使用绝对定位
-
   // === 第一个区块（深色主题视频区） ===
   .section1
     flex-direction: column    // 垂直排列子元素
     background: #1d1d1f       // 深灰色背景
     padding: 100px 0          // 上下内边距 100px
     color: white              // 白色文字
-
     // 区块头部（标题和链接）
     .sectionHeader
       display: flex                   // 使用 Flex 布局
@@ -21,7 +17,8 @@
       align-items: flex-end           // 底部对齐
       padding: 0 0 80px               // 底部内边距 80px
       column-gap: 80px                // 列间距 80px
-
+      width: 80%
+      margin: 0 auto                  // 水平居中
       // 主标题
       .headline
         font-size: 36px               // 字体大小 36px
@@ -37,28 +34,32 @@
         .headerLinkText          // 链接文字样式（未定义）
 
     // 视频容器
-    .videoBox
+    .bigVideoBox
       display: flex               // 使用 Flex 布局
       flex-direction: row         // 水平排列子元素
-      justify-content: center     // 居中对齐
+      justify-content: start      // 左侧对齐
+      width: 80%                  // 与 sectionHeader 相同宽度
+      margin: 0 auto              // 水平居中，与 sectionHeader 左侧对齐
 
-      // 单个视频项
-      .video
-        position: relative    // 相对定位（用于文字绝对定位）
-        height: 100%          // 高度 100%
-        width: 100%           // 宽度 100%
-        padding: 0 30px       // 左右内边距 30px
-        margin: 0 30px        // 左右外边距 30px
-
-
-
-
-        // 视频下方的文字说明
+      .videoBox
+        position: relative
+        font-size: 18px
+        // 单个视频项
+        .video
+          position: relative
+          width: 1260px
+          height: 680px
+          padding: 0 30px 0 0       // 只保留右侧内边距
+          margin: 0 30px 0 0        // 只保留右侧外边距
+        .text1
+          position: absolute
+          top: 5%
+          left: 50%
+          transform: translate(-50%, -50%)
         .text2
-          font-size: 14px                   // 字体大小 14px
-          position: absolute                // 绝对定位
-          text-align: center                // 文字居中
-          bottom: 1rem                      // 距离底部 1rem
-          left: 50%                         // 距离左侧 50%
-          transform: translateX(-50%)       // 向左平移 50%（实现水平居中）
-          font-weight: bold                 // 字体加粗
+          position: absolute
+          bottom: 5%
+          left: 50%
+          transform: translate(-50%, -50%)
+        .text3
+          position: absolute

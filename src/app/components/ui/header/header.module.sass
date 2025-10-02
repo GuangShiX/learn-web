@@ -3,11 +3,12 @@
   --cover-main-height: 40px
   height: var(--cover-main-height)    // 头部高度
   display: flex                       // 使用 Flex 布局
-  align-items: center                 // 垂直居中对齐
   background: #000000                 // 背景色黑色
   user-select: none                   // 禁止文字被选中
   justify-content: space-around      // 两端对齐（让内容分散到左右两端）
-  padding: 0 calc(var(--cover-main-height) * 8)                     // 左右内边距 20px，控制离边缘的距离
+  align-items: stretch
+  justify-items: stretch
+  padding: 0 calc(var(--cover-main-height) * 5)                     // 左右内边距 20px，控制离边缘的距离
 
   // === Logo 图标 ===
   .icon
@@ -16,18 +17,16 @@
     transform: scale(1) translateY(2px)   // 缩放为 1 倍，向下偏移 2px
     fill: white                           // 填充色为白色（通常用于 SVG）
 
-
   // === 导航按钮 ===
-  .iconBox
-
   .button
-    line-height: calc(var(--cover-main-height)  * 0.5)   // 按钮文字垂直居中（高度的一半）
+    display: flex                      // 使用 Flex 布局实现垂直居中
+    align-items: center                // 垂直方向居中
     font-size: 12px                    // 字体大小 12px
-    margin: 0 10px                     // 左右外边距 10px
+    padding: 10px                     // 左右外边距 10px
     text-align: center                 // 按钮文字水平居中
     background: #000000                // 按钮背景黑色
     color: #dddddd                     // 按钮文字颜色浅灰
-    transition: all 0.2s ease-in-out   // 添加过渡效果（鼠标悬停时平滑变化）
+    transition: all 0.2s ease-in-out   // 添加较长的过渡效果（0.6秒，使悬停更加平滑）
+    cursor: pointer                    // 鼠标悬停时显示手型光标
     &:hover                            // 鼠标悬停时的样式
-      background: #222222              // 悬停时背景变深灰
       color: white                     // 悬停时文字变白
