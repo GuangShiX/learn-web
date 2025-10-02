@@ -1,5 +1,4 @@
-// === 导航样式 ===
-
+// === 面包屑导航样式 ===
 
 .breadCrumbs
   display: flex
@@ -7,14 +6,14 @@
   flex-direction: column
   // 垂直排列子元素
   width: 90%
-  // 宽度为父容器的 50%
+  // 宽度为父容器的 90%
   margin: 0 auto
   // 水平居中
 
-  // 面包屑路径容器
+  // === 面包屑路径容器 ===
   .breadCrumbsPath
 
-    // 面包屑列表（使用 ol 标签）
+    // 面包屑列表（使用 ol 有序列表）
     .breadCrumbsList
       display: flex
       // 使用 Flex 布局
@@ -28,23 +27,23 @@
       // 移除默认内边距
       margin: 0
       // 移除默认外边距
-      // 苹果 Logo 图标
+
+      // === 苹果 Logo 图标 ===
       .icon
         height: 44px
-        // 图标高度
+        // 图标高度 44px
         width: 14px
-        // 图标宽度（保持比例）
+        // 图标宽度 14px（保持比例）
         fill: #1d1d1f
         // 填充色为深灰色
         margin-right: 0.5em
-        // 右侧间距
+        // 右侧间距 0.5em
         align-self: flex-end
         // 对齐到底部
         margin-bottom: -8px
-      // 向下微调位置，更贴近底端
+        // 向下微调位置 8px，更贴近底端
 
-
-      // 单个面包屑项
+      // === 单个面包屑项 ===
       .breadCrumbsItem
         display: inline-block
         // 行内块级元素，可设置宽高且不换行
@@ -57,7 +56,7 @@
         cursor: pointer
         // 鼠标悬停时显示手型指针
 
-        // 使用 ::before 伪元素添加分隔符
+        // 使用 ::before 伪元素添加箭头分隔符
         &::before
           content: "›"
           // 右箭头符号（Unicode \203A）
@@ -66,33 +65,49 @@
           color: #868686
           // 灰色箭头
           font-size: 1.2em
-  // 箭头字体比文字大 20%
+          // 箭头字体比文字大 20%
 
-  // 目录区域（预留）
+  // === 目录区域（导航栏） ===
   .directory
     display: flex
     // 使用 Flex 布局
     flex-direction: row
+    // 水平排列子元素
     align-items: start
+    // 顶部对齐
     height: 600px
     // 高度 600px
 
+    // === 单个栏目列 ===
     .column
       display: flex
+      // 使用 Flex 布局
       flex-direction: column
-      // 子元素竖向排列
+      // 垂直排列子元素
       width: 25%
+      // 宽度占 25%（每行 4 列）
 
+      // 栏目标题
       .title
         font-weight: 600
+        // 字体加粗
         margin: 10px 0 0 0
+        // 只保留顶部外边距 10px
         font-size: 1.2rem
+        // 字体大小 1.2rem（约 19.2px）
 
+      // 栏目按钮/链接
       .button
         font-size: 0.8rem
+        // 字体大小 0.8rem（约 12.8px）
         margin: 10px 0 0 0
-    // 只保留顶部间距，左侧顶格
+        // 只保留顶部外边距 10px
+
+    // === 栏目盒子容器 ===
     .columnBox
       display: flex
+      // 使用 Flex 布局
       flex-direction: column
+      // 垂直排列子元素
       margin: 30px 0 10px 0
+      // 上边距 30px，下边距 10px
