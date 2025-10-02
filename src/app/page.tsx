@@ -3,7 +3,7 @@ import Header from './components/ui/header'
 import Wrapper from './components/sections/wrapper'
 import VideoWrapper from './components/sections/video-wrapper'
 import HighLight from './components/sections/highlights'
-import Footer from './components/sections/footer'
+import BreadCrumbs from './components/sections/breadCrumbs'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Wrapper />
       <VideoWrapper />
       <HighLight />
-      <Footer />
+      <BreadCrumbs />
     </main>
   )
 }
