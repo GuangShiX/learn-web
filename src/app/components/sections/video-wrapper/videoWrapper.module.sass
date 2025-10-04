@@ -1,10 +1,9 @@
 // === 视频包装容器样式 ===
 .videoWrapper
-  --cover-image-height: 50rem
   position: relative                                   // 相对定位（子元素可绝对定位）
   background: black                                    // 黑色背景
   width: 100%                                          // 宽度 100%
-  height: calc(var(--cover-image-height) )       // 高度 = 封面高度 + 4rem
+  height: 50rem
 
   // === 封面图片 ===
   .image
@@ -12,9 +11,8 @@
     // 绝对定位
     bottom: 0
     // 靠底部对齐
-    width: 80%
-    // 宽度占满容器
-    height: auto
+    height: 90%
+    width: auto
     // 高度自动计算（保持图片比例）
     left: 50%
     // 距离左侧 50%
@@ -42,7 +40,7 @@
       background: #0066cc                // 蓝色背景
       color: white                       // 白色文字
       border-radius: 999999px            // 超大圆角（胶囊按钮）
-
+      font-weight: 400
     // === 文字样式 ===
     .text
       margin: 10px 0

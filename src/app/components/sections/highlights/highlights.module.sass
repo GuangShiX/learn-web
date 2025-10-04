@@ -13,7 +13,7 @@
     // 垂直排列子元素
     background: #1d1d1f
     // 深灰色背景（苹果官网深色主题）
-    padding: 100px 0
+    padding-top: 5%
     // 上下内边距 100px
     color: white
     // 白色文字
@@ -40,7 +40,7 @@
       // 主标题
       .headline
         font-size: 36px
-        // 字体大小 36px
+      // 字体大小 36px
 
       // === 头部链接容器 ===
       .headLinkBox
@@ -64,17 +64,17 @@
         // 鼠标悬停效果
         &:hover
           color: #0077ed
-          // 更深的蓝色
+        // 更深的蓝色
 
         // 链接文字
         .headerLinkText
           font-size: 18px
-          // 字体大小 18px
+        // 字体大小 18px
 
         // 链接图标
         .headLinkIco
           font-size: 22px
-          // 图标大小 22px
+    // 图标大小 22px
 
     // === 视频容器 ===
     .bigVideoBox
@@ -84,18 +84,23 @@
       // 左侧对齐
       width: 100%
       padding: 0 10%
+      // 左右内边距 10%
       box-sizing: border-box
+      // 盒模型计算包含 padding
       gap: 4rem
+      // 视频项之间的间距
       overflow-x: auto
+      // 允许水平滚动
       &::-webkit-scrollbar
         display: none
+      // 隐藏滚动条（Webkit 浏览器）
+
       // === 单个视频盒子 ===
       .videoBox
         position: relative
         // 相对定位（子元素可绝对定位）
-        font-size: 18px
-        // 字体大小 18px
-
+        font-size: 22px
+        font-weight: 500
         // 视频元素
         .video
           position: relative
@@ -107,19 +112,21 @@
           border-radius: 30px
           // 圆角 30px
           overflow: hidden
-          // 确保圆角生效（隐藏超出部分）
+        // 确保圆角生效（隐藏超出部分）
 
         // === 文字叠加层 ===
         // 顶部居中文字
         .text1
           position: absolute
+
           // 绝对定位（覆盖在视频上）
-          top: 5%
+          top: 7%
           // 距离顶部 5%
           left: 50%
           // 距离左侧 50%
           transform: translate(-50%, -50%)
           // 向左上平移自身宽高的 50%（实现居中）
+          text-align: center
 
         // 底部居中文字
         .text2
@@ -131,39 +138,71 @@
           // 距离左侧 50%
           transform: translate(-50%, -50%)
           // 居中对齐
+          text-align: center
 
         // 左上角文字
         .text3
           position: absolute
+          width: 50%
           // 绝对定位
           top: 10%
           // 距离顶部 10%
-          left: 20%
+          left: 5%
           // 距离左侧 20%
           color: black
+    // 黑色文字
+
+    // === 控制条（视频导航指示器） ===
     .controlBar
       margin-top: 2rem
+      // 顶部外边距
       display: flex
+      // 使用 Flex 布局
       width: 100%
+      // 宽度 100%
       justify-content: center
+      // 水平居中
+
+      // 控制按钮容器
       .controlBox
         padding: 0.8rem
+        // 内边距
         border-radius: 9999px
+        // 圆形边框（大数值实现完全圆形）
         background: #2A2A2AB8
+        // 半透明深灰色背景
         display: inline-flex
+        // 行内 Flex 布局
+
+        // 普通控制按钮
         .button
           background: #ffffffcc
+          // 半透明白色背景
           width: 0.5rem
+          // 宽度
           height: 0.5rem
+          // 高度
           margin: 0.5rem
+          // 外边距
           border-radius: 9999px
+          // 圆形
           cursor: pointer
+          // 鼠标手型
+          // 鼠标悬停效果
           &:hover
             background: #ffffffee
+          // 更不透明的白色
+
+          // 鼠标按下效果
           &:active
             background: #ffffffff
+        // 完全不透明的白色
+
+        // 激活状态的控制按钮
         .activeButton
           width: 3rem
+      // 更宽的激活状态指示器
 
+      // 控制图标
       .controlIco
-          // 黑色文字
+    // 黑色文字（这里样式定义不完整，可能需要补充）
