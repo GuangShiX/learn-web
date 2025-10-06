@@ -21,29 +21,27 @@
     // 白色文字
 
     // === 区块头部（标题和链接） ===
+
     .sectionHeader
       display: flex
       // 使用 Flex 布局
       flex-direction: row
       // 水平排列子元素
+      flex-wrap: wrap
       justify-content: space-between
       // 两端对齐
       align-items: flex-end
+
       // 底部对齐
       padding: 0 0 80px
-      // 底部内边距 80px
       width: 75rem
-      max-width: calc(100% - 10rem)
       margin: 0 auto
-      // 宽度为父容器的 80%
-      // 水平居中
-
-      // 主标题
+      min-width: 10rem
+      @media (max-width: 1500px)
+        width: calc(100% - 10rem)
       .headline
         font-size: 40px
         font-weight: bold
-
-      // === 头部链接容器 ===
       .headLinkBox
         font-size: 15px
         display: flex
@@ -73,7 +71,6 @@
           transition: color 0.3s
           &:hover
             color: #0077ed
-    // 图标大小 22px
 
     // === 视频容器 ===
     .bigVideoBox
@@ -157,7 +154,7 @@
 
     // === 控制条（视频导航指示器） ===
     .controlBar
-      margin-top: 2rem
+      margin-top: 50px
       // 顶部外边距
       display: flex
       // 使用 Flex 布局
@@ -169,6 +166,7 @@
       // 控制按钮容器
       .controlBox
         padding: 0.8rem
+        margin-bottom: 100px
         // 内边距
         border-radius: 9999px
         // 圆形边框（大数值实现完全圆形）

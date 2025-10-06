@@ -1,34 +1,37 @@
-// === 头部导航栏样式 ===
-.header
 
-  --cover-main-height: 40px
-  height: var(--cover-main-height)    // 头部高度
-  display: flex                       // 使用 Flex 布局
-  background: #000000                 // 背景色黑色
-  user-select: none                   // 禁止文字被选中
-  justify-content: space-around      // 两端对齐（让内容分散到左右两端）
-  align-items: stretch
-  justify-items: stretch
-  padding: 0 calc(var(--cover-main-height) * 5)                     // 左右内边距 20px，控制离边缘的距离
+  .header
 
-  // === Logo 图标 ===
-  .icon
-    width: var(--cover-main-height)       // 图标宽度等于头部高度
-    height: var(--cover-main-height)      // 图标高度等于头部高度
-    transform: scale(1) translateY(1px)   // 缩放为 1 倍，向下偏移 2px
-    fill: #f0f0f0                           // 填充色为白色（通常用于 SVG）
+    --cover-main-height: 40px
+    height: var(--cover-main-height)    // 头部高度
+    display: flex                       // 使用 Flex 布局
+    background: #000000                 // 背景色黑色
+    user-select: none                   // 禁止文字被选中
+    justify-content: center      // 两端对齐（让内容分散到左右两端）
+    @media (max-width: 864px)
+      justify-content: space-between
+    width: auto
+    margin: 0 auto
 
-  // === 导航按钮 ===
-  .button
-    display: inline-block          // 行内块级元素，可设置宽高且不换行
-    font-size: 0.7rem
-    font-weight: 300
-    align-items: center                // 垂直方向居中
-    padding: 12px                     // 左右外边距 10px
-    text-align: center                 // 按钮文字水平居中
-    background: #000000                // 按钮背景黑色
-    color: #dddddd                     // 按钮文字颜色浅灰
-    transition: all 0.2s ease-in-out   // 添加较长的过渡效果（0.6秒，使悬停更加平滑）
-    cursor: pointer                    // 鼠标悬停时显示手型光标
-    &:hover                            // 鼠标悬停时的样式
-      color: white                     // 悬停时文字变白
+    // === Logo 图标 ===
+    .icon
+      width: var(--cover-main-height)       // 图标宽度等于头部高度
+      height: var(--cover-main-height)      // 图标高度等于头部高度
+      transform: scale(1) translateY(1px)   // 缩放为 1 倍，向下偏移 2px
+      fill: #f0f0f0                           // 填充色为白色（通常用于 SVG）
+
+    // === 导航按钮 ===
+    .button
+      @media (max-width: 864px)
+        display: none
+      display: inline-block          // 行内块级元素，可设置宽高且不换行
+      font-size: 0.7rem
+      font-weight: 300
+      align-items: center                // 垂直方向居中
+      padding: 12px                     // 左右外边距 10px
+      text-align: center                 // 按钮文字水平居中
+      background: #000000                // 按钮背景黑色
+      color: #dddddd                     // 按钮文字颜色浅灰
+      transition: all 0.2s ease-in-out   // 添加较长的过渡效果（0.6秒，使悬停更加平滑）
+      cursor: pointer                    // 鼠标悬停时显示手型光标
+      &:hover                            // 鼠标悬停时的样式
+        color: white                     // 悬停时文字变白
