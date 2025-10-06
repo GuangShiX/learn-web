@@ -80,20 +80,19 @@
     .bigVideoBox
       display: flex
       // 使用 Flex 布局
-      justify-content: start
-      // 左侧对齐
+      justify-content: flex-start
+      // 左对齐
       width: 100%
       padding: 0 10%
       // 左右内边距 10%
       box-sizing: border-box
       // 盒模型计算包含 padding
-      gap: 4rem
-      // 视频项之间的间距
-      overflow-x: auto
-      // 允许水平滚动
-      &::-webkit-scrollbar
-        display: none
-      // 隐藏滚动条（Webkit 浏览器）
+      min-height: 450px
+      // 最小高度，防止切换时高度跳动
+      overflow-x: hidden
+      // 隐藏横向滚动条
+      scroll-snap-type: x mandatory
+      // 启用横向滚动吸附
 
       // === 单个视频盒子 ===
       .videoBox
@@ -101,6 +100,15 @@
         // 相对定位（子元素可绝对定位）
         font-size: 22px
         font-weight: 500
+        animation: fadeIn 0.5s ease-in-out
+        // 淡入动画效果
+        flex: 0 0 100%
+        // 每个视频盒子占据 100% 宽度
+        scroll-snap-align: start
+        // 滚动吸附到起始位置
+        display: flex
+        justify-content: center
+        // 内容居中
         // 视频元素
         .video
           position: relative
@@ -205,4 +213,15 @@
 
       // 控制图标
       .controlIco
-    // 黑色文字（这里样式定义不完整，可能需要补充）
+
+// === 动画定义 ===
+// 淡入动画
+@keyframes fadeIn
+  from
+    opacity: 0
+    transform: translateY(10px)
+    // 从下方 10px 开始
+  to
+    opacity: 1
+    transform: translateY(0)
+    // 移动到原位置

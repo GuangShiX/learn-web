@@ -1,9 +1,7 @@
 'use client'
 import { clsx } from 'clsx'
 import Image from 'next/image'
-import { useState } from 'react'
-
-
+import { useRef, useState } from 'react'
 
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
@@ -32,7 +30,24 @@ export default function Test() {
     },
   ]
 
-  const [activeIndex, setActiveIndex] = useState(1)
+  const [activeIndex, setActiveIndex] = useState(0)
+  // 创建一个 ref 来引用滚动容器
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  // 切换图片的函数
+  const handleImageSwitch = (index: number) => {
+    setActiveIndex(index)
+    // 如果容器存在，执行平滑滚动
+    if (scrollContainerRef.current) {
+      // 计算每个图片的宽度（包括间距）
+      const containerWidth = scrollContainerRef.current.offsetWidth
+      // 滚动到指定位置
+      scrollContainerRef.current.scrollTo({
+        left: containerWidth * index,
+        behavior: 'smooth', // 平滑滚动效果
+      })
+    }
+  }
 
   return (
     <div className={styles.page}>
@@ -44,7 +59,7 @@ export default function Test() {
             <i className={`fas fa-play-circle ${styles.headLinkIco}`} aria-hidden='true'></i>
           </a>
         </div>
-        <div className={styles.bigVideoBox}>
+        <div ref={scrollContainerRef} className={styles.bigVideoBox}>
           {videoData.map((item) => (
             <div key={item.id} className={styles.videoBox}>
               <Image className={styles.video} src={item.image} width={1868 * 0.3} height={1256 * 0.3} alt={'error'} />
@@ -58,9 +73,7 @@ export default function Test() {
               <div
                 key={item.id}
                 className={clsx(styles.button, activeIndex == index ? styles.activeButton : null)}
-                onClick={() => {
-                  setActiveIndex(index)
-                }}
+                onClick={() => handleImageSwitch(index)}
               ></div>
             ))}
           </div>
