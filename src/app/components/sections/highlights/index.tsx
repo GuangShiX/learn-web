@@ -60,12 +60,14 @@ export default function Test() {
           </a>
         </div>
         <div ref={scrollContainerRef} className={styles.bigVideoBox}>
-          {videoData.map((item) => (
-            <div key={item.id} className={styles.videoBox}>
-              <Image className={styles.video} src={item.image} width={1868 * 0.3} height={1256 * 0.3} alt={'error'} />
-              <div className={item.textClass}>{item.text}</div>
-            </div>
-          ))}
+          <div className={styles.bigVideoBoxContent}>
+            {videoData.map((item) => (
+              <div key={item.id} className={styles.videoBox}>
+                <Image className={styles.video} src={item.image} width={1868 * 0.3} height={1256 * 0.3} alt={'error'} />
+                <div className={item.textClass}>{item.text}</div>
+              </div>
+            ))}
+          </div>
         </div>
         <div className={styles.controlBar}>
           <div className={styles.controlBox}>

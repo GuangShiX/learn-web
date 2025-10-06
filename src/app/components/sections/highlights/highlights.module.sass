@@ -10,6 +10,8 @@
   // === 第一个区块（深色主题视频区） ===
   .section1
     flex-direction: column
+    width: 100%
+    height: 100%
     // 垂直排列子元素
     background: #1d1d1f
     // 深灰色背景（苹果官网深色主题）
@@ -30,20 +32,20 @@
       // 底部对齐
       padding: 0 0 80px
       // 底部内边距 80px
-      column-gap: 80px
-      // 列间距 80px
-      width: 80%
-      // 宽度为父容器的 80%
+      width: 75rem
+      max-width: calc(100% - 10rem)
       margin: 0 auto
+      // 宽度为父容器的 80%
       // 水平居中
 
       // 主标题
       .headline
-        font-size: 36px
-      // 字体大小 36px
+        font-size: 40px
+        font-weight: bold
 
       // === 头部链接容器 ===
       .headLinkBox
+        font-size: 15px
         display: flex
         // 使用 Flex 布局
         flex-direction: row
@@ -56,109 +58,102 @@
         // 苹果蓝色
         text-decoration: none
         // 移除下划线
-        cursor: pointer
-        // 鼠标悬停时显示手型
-        transition: color 0.3s
-        // 颜色过渡效果
 
-        // 鼠标悬停效果
-        &:hover
-          color: #0077ed
-        // 更深的蓝色
 
         // 链接文字
         .headerLinkText
-          font-size: 18px
-        // 字体大小 18px
-
+          cursor: pointer
+          transition: color 0.3s
+          &:hover
+            color: #0077ed
         // 链接图标
         .headLinkIco
           font-size: 22px
+          cursor: pointer
+          transition: color 0.3s
+          &:hover
+            color: #0077ed
     // 图标大小 22px
 
     // === 视频容器 ===
     .bigVideoBox
       display: flex
-      // 使用 Flex 布局
-      justify-content: flex-start
-      // 左对齐
       width: 100%
-      padding: 0 10%
-      // 左右内边距 10%
-      box-sizing: border-box
-      // 盒模型计算包含 padding
       min-height: 450px
-      // 最小高度，防止切换时高度跳动
-      overflow-x: hidden
+      overflow-x: auto
+      &::-webkit-scrollbar
+        display: none
       // 隐藏横向滚动条
-      scroll-snap-type: x mandatory
-      // 启用横向滚动吸附
 
-      // === 单个视频盒子 ===
-      .videoBox
-        position: relative
-        // 相对定位（子元素可绝对定位）
-        font-size: 22px
-        font-weight: 500
-        animation: fadeIn 0.5s ease-in-out
-        // 淡入动画效果
-        flex: 0 0 100%
-        // 每个视频盒子占据 100% 宽度
-        scroll-snap-align: start
-        // 滚动吸附到起始位置
+      .bigVideoBoxContent
         display: flex
+        min-width: calc(100% + 117rem)
+        max-width: calc(100% - 10rem)
         justify-content: center
-        // 内容居中
-        // 视频元素
-        .video
+        gap: 6rem
+
+        // === 单个视频盒子 ===
+        .videoBox
           position: relative
-          // 相对定位
-          width: 1260 * 0.8px
-          // 宽度计算（1260px * 0.8）
-          height: auto
-          // 高度自动
-          border-radius: 30px
-          // 圆角 30px
-          overflow: hidden
-        // 确保圆角生效（隐藏超出部分）
+          // 相对定位（子元素可绝对定位）
+          font-size: 22px
+          font-weight: 500
+          width: 60rem
+          animation: fadeIn 0.5s ease-in-out
+          // 淡入动画效果
+          scroll-snap-align: start
+          // 滚动吸附到起始位置
+          display: flex
+          justify-content: center
+          // 视频元素
+          .video
+            position: relative
+            // 相对定位
+            width: 1260 * 1.5px
+            // 宽度计算（1260px * 0.8）
+            height: auto
+            // 高度自动
+            border-radius: 30px
+            // 圆角 30px
+            overflow: hidden
+            // 确保圆角生效（隐藏超出部分）
 
-        // === 文字叠加层 ===
-        // 顶部居中文字
-        .text1
-          position: absolute
+          // === 文字叠加层 ===
+          // 顶部居中文字
+          .text1
+            position: absolute
 
-          // 绝对定位（覆盖在视频上）
-          top: 7%
-          // 距离顶部 5%
-          left: 50%
-          // 距离左侧 50%
-          transform: translate(-50%, -50%)
-          // 向左上平移自身宽高的 50%（实现居中）
-          text-align: center
+            // 绝对定位（覆盖在视频上）
+            top: 7%
+            // 距离顶部 5%
+            left: 50%
+            // 距离左侧 50%
+            transform: translate(-50%, -50%)
+            // 向左上平移自身宽高的 50%（实现居中）
+            text-align: center
 
-        // 底部居中文字
-        .text2
-          position: absolute
-          // 绝对定位
-          bottom: 5%
-          // 距离底部 5%
-          left: 50%
-          // 距离左侧 50%
-          transform: translate(-50%, -50%)
-          // 居中对齐
-          text-align: center
+          // 底部居中文字
+          .text2
+            position: absolute
+            // 绝对定位
+            bottom: 5%
+            // 距离底部 5%
+            left: 50%
+            // 距离左侧 50%
+            transform: translate(-50%, -50%)
+            // 居中对齐
+            text-align: center
 
-        // 左上角文字
-        .text3
-          position: absolute
-          width: 50%
-          // 绝对定位
-          top: 10%
-          // 距离顶部 10%
-          left: 5%
-          // 距离左侧 20%
-          color: black
-    // 黑色文字
+          // 左上角文字
+          .text3
+            position: absolute
+            width: 50%
+            // 绝对定位
+            top: 10%
+            // 距离顶部 10%
+            left: 5%
+            // 距离左侧 20%
+            color: black
 
     // === 控制条（视频导航指示器） ===
     .controlBar
